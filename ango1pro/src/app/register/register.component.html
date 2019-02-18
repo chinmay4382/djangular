@@ -1,0 +1,35 @@
+<!-- <div style="text-align:center">
+    <input [(ngModel)]="register.username" placeholder="username"><br>
+    <input [(ngModel)]="register.password" type="password" placeholder="password"><br>
+    <input [(ngModel)]="register.email" placeholder="email"><br>
+    <button (click)="registerUser()">Register User</button>
+</div> -->
+
+
+
+<div class="login">
+    <div class="login-header">
+        <h1>Login</h1>
+    </div>
+    <div class="login-form">
+
+        <input type="text" [(ngModel)]="register.username" placeholder="username" required><br>
+  <input [(ngModel)]="register.password" type="password" placeholder="password"><br>
+        <input type="text" [(ngModel)]="register.email" placeholder="email" required><br>
+
+
+
+
+        <!-- <input type="button" value="Login" class="login-button" (click)="login()" /> -->
+
+
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary" (click)="registerUser()">Register</button>
+            <br>
+
+        </div>
+        <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+        <br>
+
+    </div>
+</div>
